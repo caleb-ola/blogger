@@ -1,0 +1,16 @@
+<%- include("header");-%>
+<h1>HOME</h1>
+
+<p><%=HSC %></p>
+
+<% titler.forEach(data => { %>
+     <h2><%= data.title %></h2>
+    <p><%= data.content.substring(0,100)+"..."%>  <a href="/posts/<%=data._id %>">Read more</a></p>
+    
+
+<% }); %>
+   
+
+
+
+<%-include("footer");-%>
